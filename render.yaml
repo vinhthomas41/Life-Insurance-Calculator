@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ul-premium-calculator
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: shiny run app.py --host 0.0.0.0 --port 8000
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.0
